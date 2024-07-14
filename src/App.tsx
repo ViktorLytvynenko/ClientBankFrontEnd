@@ -15,6 +15,7 @@ import DeleteAccountForCustomer from "./screens/Info/InfoRequests/DeleteAccountF
 import AddFunds from "./screens/Info/InfoRequests/AddFunds";
 import WithdrawFunds from "./screens/Info/InfoRequests/WithdrawFunds";
 import SendFunds from "./screens/Info/InfoRequests/SendFunds";
+import DeleteAllAccountsForCustomer from "./screens/Info/InfoRequests/DeleteAllAccountsForCustomer";
 
 
 const App: FC<any> = () => {
@@ -31,6 +32,7 @@ const App: FC<any> = () => {
                     <Route path='/delete_customer' element={<DeleteCustomer/>}/>
                     <Route path='/create_account' element={<CreateAccountForCustomer/>}/>
                     <Route path='/delete_account' element={<DeleteAccountForCustomer/>}/>
+                    <Route path='/delete_all_accounts' element={<DeleteAllAccountsForCustomer/>}/>
                     <Route path='/add_funds' element={<AddFunds/>}/>
                     <Route path='/withdraw_funds' element={<WithdrawFunds/>}/>
                     <Route path='/send_funds' element={<SendFunds/>}/>

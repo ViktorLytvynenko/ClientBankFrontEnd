@@ -37,6 +37,11 @@ const Info: FC<any> = () => {
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
+                    <NavLink to="/delete_all_accounts" className={styles.list_item_link}>
+                        Delete all customer accounts
+                    </NavLink>
+                </li>
+                <li className={styles.list_item}>
                     <NavLink to="/add_funds" className={styles.list_item_link}>
                         Add funds
                     </NavLink>

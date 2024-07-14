@@ -39,6 +39,10 @@ export const deleteCustomerAccount = async (customerId: number, accountNumber: s
     return response.data;
 };
 
+export const deleteAllCustomerAccounts = async (customerId: number) => {
+    const response = await instance.delete(customers + `/delete_accounts_by_id?id=${customerId}`);
+    return response.data;
+};
 
 export const addFunds = async (addFundsModel: { cardNumber: string, sum: number }) => {
     const response = await instance.post(accounts + '/add_funds', addFundsModel);
