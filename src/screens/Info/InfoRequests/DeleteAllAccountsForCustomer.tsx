@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import {deleteAllCustomerAccounts, deleteCustomerAccount} from '../../../api/requests';
+import {deleteAllCustomerAccounts} from '../../../api/requests';
 import Header from '../../../components/Header/Header';
 
 const DeleteAllAccountsForCustomer: FC<any> = () => {
