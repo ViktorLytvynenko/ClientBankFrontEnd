@@ -38,7 +38,7 @@ const AllCustomers: FC<any> = () => {
                                         {customer.accounts.map((account: any, index: number) => (
                                             <li key={index}>
                                                 <div>№: {account.number}</div>
-                                                <div>Balance: {account.balance} {account.currency}</div>
+                                                <div className={styles.accountBalance}>Balance: {account.balance} {account.currency}</div>
                                             </li>
                                         ))}
                                     </ul>
