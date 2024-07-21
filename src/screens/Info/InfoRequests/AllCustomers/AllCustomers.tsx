@@ -23,6 +23,7 @@ const AllCustomers: FC<any> = () => {
                     <th>Email</th>
                     <th>Age</th>
                     <th>Accounts</th>
+                    <th>Employer</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -38,12 +39,26 @@ const AllCustomers: FC<any> = () => {
                                         {customer.accounts.map((account: any, index: number) => (
                                             <li key={index}>
                                                 <div>№: {account.number}</div>
-                                                <div className={styles.accountBalance}>Balance: {account.balance} {account.currency}</div>
+                                                <div
+                                                    className={styles.accountBalance}>Balance: {account.balance} {account.currency}</div>
                                             </li>
                                         ))}
                                     </ul>
                                 ) : (
                                     <span>No accounts</span>
+                                )}
+                            </td>
+                            <td>
+                                {customer.employers && customer.employers.length > 0 ? (
+                                    <ul>
+                                        {customer.employers.map((employer: any, index: number) => (
+                                            <li key={index}>
+                                                <div>{employer.name}</div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <span>Doesn't work</span>
                                 )}
                             </td>
                         </tr>
