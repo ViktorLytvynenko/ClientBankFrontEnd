@@ -56,6 +56,16 @@ const Info: FC<any> = () => {
                         Send funds
                     </NavLink>
                 </li>
+                <li className={styles.list_item}>
+                    <NavLink to="/add_customer_from_employer" className={styles.list_item_link}>
+                        Add customer to employer
+                    </NavLink>
+                </li>
+                <li className={styles.list_item}>
+                    <NavLink to="/remove_customer_from_employer" className={styles.list_item_link}>
+                        Remove customer from employer
+                    </NavLink>
+                </li>
             </ul>
 
         </div>

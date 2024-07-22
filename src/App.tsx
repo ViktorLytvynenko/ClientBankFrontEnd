@@ -17,6 +17,7 @@ import WithdrawFunds from "./screens/Info/InfoRequests/WithdrawFunds";
 import SendFunds from "./screens/Info/InfoRequests/SendFunds";
 import DeleteAllAccountsForCustomer from "./screens/Info/InfoRequests/DeleteAllAccountsForCustomer";
 import DeleteEmployerForCustomer from "./screens/Info/InfoRequests/DeleteEmployerForCustomer";
+import AddEmployerForCustomer from "./screens/Info/InfoRequests/AddEmployerForCustomer";
 
 
 const App: FC<any> = () => {
@@ -37,6 +38,7 @@ const App: FC<any> = () => {
                     <Route path='/add_funds' element={<AddFunds/>}/>
                     <Route path='/withdraw_funds' element={<WithdrawFunds/>}/>
                     <Route path='/send_funds' element={<SendFunds/>}/>
+                    <Route path='/add_customer_from_employer' element={<AddEmployerForCustomer/>}/>
                     <Route path='/remove_customer_from_employer' element={<DeleteEmployerForCustomer/>}/>
                 </Routes>
             </BrowserRouter>
