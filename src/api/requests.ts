@@ -58,3 +58,15 @@ export const sendFunds = async (addFundsModel: { numberFrom: string, numberTo: s
     const response = await instance.post(accounts + '/send_funds', addFundsModel);
     return response.data;
 };
+
+export const addEmployerToCustomer = async (customerId: number, employerId: number) => {
+    const response =
+        await instance.put(customers + `/customer/add_employer?customerId=${customerId}&employerId=${employerId}`);
+    return response.data;
+}
+
+export const removeEmployerToCustomer = async (customerId: number, employerId: number) => {
+    const response =
+        await instance.put(customers + `/customer/remove_employer?customerId=${customerId}&employerId=${employerId}`);
+    return response.data;
+}
