@@ -12,57 +12,57 @@ const Info: FC<any> = () => {
             <AllCustomers/>
             <ul className={styles.list}>
                 <li className={styles.list_item}>
-                    <NavLink to="/create_customer" className={styles.list_item_link}>
+                    <NavLink to="/info/create_customer" className={styles.list_item_link}>
                         Create customer
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/edit_customer" className={styles.list_item_link}>
+                    <NavLink to="/info/edit_customer" className={styles.list_item_link}>
                         Edit customer
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/delete_customer" className={styles.list_item_link}>
+                    <NavLink to="/info/delete_customer" className={styles.list_item_link}>
                         Delete customer
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/create_account" className={styles.list_item_link}>
+                    <NavLink to="/info/create_account" className={styles.list_item_link}>
                         Create account for customer
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/delete_account" className={styles.list_item_link}>
+                    <NavLink to="/info/delete_account" className={styles.list_item_link}>
                         Delete account for customer
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/delete_all_accounts" className={styles.list_item_link}>
+                    <NavLink to="/info/delete_all_accounts" className={styles.list_item_link}>
                         Delete all customer accounts
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/add_funds" className={styles.list_item_link}>
+                    <NavLink to="/info/add_funds" className={styles.list_item_link}>
                         Add funds
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/withdraw_funds" className={styles.list_item_link}>
+                    <NavLink to="/info/withdraw_funds" className={styles.list_item_link}>
                         Withdraw funds
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/send_funds" className={styles.list_item_link}>
+                    <NavLink to="/info/send_funds" className={styles.list_item_link}>
                         Send funds
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/add_customer_from_employer" className={styles.list_item_link}>
+                    <NavLink to="/info/add_customer_from_employer" className={styles.list_item_link}>
                         Add customer to employer
                     </NavLink>
                 </li>
                 <li className={styles.list_item}>
-                    <NavLink to="/remove_customer_from_employer" className={styles.list_item_link}>
+                    <NavLink to="/info/remove_customer_from_employer" className={styles.list_item_link}>
                         Remove customer from employer
                     </NavLink>
                 </li>

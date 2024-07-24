@@ -26,20 +26,24 @@ const App: FC<any> = () => {
             <BrowserRouter>
                 <Routes>
                     <Route index path='/' element={<Home/>}/>
-                    <Route path='/info' element={<Info/>}/>
                     <Route path='/about_us' element={<AboutUs/>}/>
                     <Route path='/contacts' element={<Contacts/>}/>
-                    <Route path='/create_customer' element={<CreateCustomer/>}/>
-                    <Route path='/edit_customer' element={<UpdateCustomer/>}/>
-                    <Route path='/delete_customer' element={<DeleteCustomer/>}/>
-                    <Route path='/create_account' element={<CreateAccountForCustomer/>}/>
-                    <Route path='/delete_account' element={<DeleteAccountForCustomer/>}/>
-                    <Route path='/delete_all_accounts' element={<DeleteAllAccountsForCustomer/>}/>
-                    <Route path='/add_funds' element={<AddFunds/>}/>
-                    <Route path='/withdraw_funds' element={<WithdrawFunds/>}/>
-                    <Route path='/send_funds' element={<SendFunds/>}/>
-                    <Route path='/add_customer_from_employer' element={<AddEmployerForCustomer/>}/>
-                    <Route path='/remove_customer_from_employer' element={<DeleteEmployerForCustomer/>}/>
+
+                    <Route path='/info'>
+                        <Route path='' element={<Info/>}/>
+                        <Route path='create_customer' element={<CreateCustomer/>}/>
+                        <Route path='edit_customer' element={<UpdateCustomer/>}/>
+                        <Route path='delete_customer' element={<DeleteCustomer/>}/>
+                        <Route path='create_account' element={<CreateAccountForCustomer/>}/>
+                        <Route path='delete_account' element={<DeleteAccountForCustomer/>}/>
+                        <Route path='delete_all_accounts' element={<DeleteAllAccountsForCustomer/>}/>
+                        <Route path='add_funds' element={<AddFunds/>}/>
+                        <Route path='withdraw_funds' element={<WithdrawFunds/>}/>
+                        <Route path='send_funds' element={<SendFunds/>}/>
+                        <Route path='add_customer_from_employer' element={<AddEmployerForCustomer/>}/>
+                        <Route path='remove_customer_from_employer' element={<DeleteEmployerForCustomer/>}/>
+                    </Route>
+
                 </Routes>
             </BrowserRouter>
         </Provider>
