@@ -8,14 +8,8 @@ export const getAllDataCustomers = async () => {
     return data;
 }
 
-export const createCustomer = async (name: string, email: string, age: number) => {
-    const response = await instance.post(customers + "/create", {}, {
-        params: {
-            name: name,
-            email: email,
-            age: age
-        }
-    });
+export const createCustomer = async (customer: {name: string, email: string, age: number, phone: string, password: string}) => {
+    const response = await instance.post(customers + "/create", customer);
     return response.data;
 };
 
