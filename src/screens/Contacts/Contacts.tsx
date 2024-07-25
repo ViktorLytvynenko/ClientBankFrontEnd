@@ -1,5 +1,4 @@
 import React, {FC} from "react";
-import Header from "../../components/Header/Header";
 import styles from "./contacts.module.scss";
 
 const Contacts: FC<any> = () => {
@@ -8,7 +7,6 @@ const Contacts: FC<any> = () => {
 
     return (
         <div>
-            <Header/>
             <div className={styles.container}>
                 <div>Contact information</div>
                 <ul className={styles.container_list}>

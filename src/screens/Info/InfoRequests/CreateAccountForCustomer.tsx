@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {createAccountByCustomerId} from '../../../api/requests';
-import Header from '../../../components/Header/Header';
 
 const CreateAccountForCustomer = () => {
     const [customerId, setCustomerId] = useState('');
@@ -20,7 +19,6 @@ const CreateAccountForCustomer = () => {
 
     return (
         <div>
-            <Header />
             <h2>Create Account by Customer ID</h2>
             <form onSubmit={handleSubmit}>
                 <label>Customer ID:</label>

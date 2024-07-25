@@ -1,5 +1,4 @@
 import React, {FC} from "react";
-import Header from "../../components/Header/Header";
 import {NavLink} from "react-router-dom";
 import styles from "./info.module.scss"
 import AllCustomers from "./InfoRequests/AllCustomers/AllCustomers";
@@ -8,7 +7,6 @@ const Info: FC<any> = () => {
 
     return (
         <div>
-            <Header/>
             <AllCustomers/>
             <ul className={styles.list}>
                 <li className={styles.list_item}>

@@ -1,6 +1,5 @@
 import React, {FC, useState} from "react";
 import {updateCustomer} from "../../../api/requests";
-import Header from "../../../components/Header/Header";
 
 const UpdateCustomer: FC<any> = () => {
 
@@ -25,7 +24,7 @@ const UpdateCustomer: FC<any> = () => {
 
     return (
         <div>
-            <Header/>
+
             <h2>Update Customer</h2>
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>

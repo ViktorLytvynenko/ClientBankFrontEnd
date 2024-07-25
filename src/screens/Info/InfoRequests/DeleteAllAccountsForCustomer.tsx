@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react';
 import {deleteAllCustomerAccounts} from '../../../api/requests';
-import Header from '../../../components/Header/Header';
 
 const DeleteAllAccountsForCustomer: FC<any> = () => {
     const [id, setId] = useState<string>('');
@@ -19,7 +18,6 @@ const DeleteAllAccountsForCustomer: FC<any> = () => {
 
     return (
         <div>
-            <Header />
             <h2>Delete Customer</h2>
             <form onSubmit={handleSubmit}>
                 <label>Client ID:</label>

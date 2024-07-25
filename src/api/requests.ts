@@ -3,8 +3,8 @@ import {instance} from "./instance";
 const customers = "/customers"
 const accounts = "/accounts"
 
-export const getCustomers = async () => {
-    const {data} = await instance.get(customers);
+export const getAllDataCustomers = async () => {
+    const {data} = await instance.get(customers + "/all_data");
     return data;
 }
 

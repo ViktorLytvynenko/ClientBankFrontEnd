@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react';
 import {withdrawFunds} from '../../../api/requests';
-import Header from '../../../components/Header/Header';
 
 const WithdrawFunds: FC<any> = () => {
     const [cardNumber, setCardNumber] = useState<string>('');
@@ -21,7 +20,6 @@ const WithdrawFunds: FC<any> = () => {
 
     return (
         <div>
-            <Header/>
             <h2>Add funds</h2>
             <form onSubmit={handleSubmit}>
                 <label>Card number:</label>

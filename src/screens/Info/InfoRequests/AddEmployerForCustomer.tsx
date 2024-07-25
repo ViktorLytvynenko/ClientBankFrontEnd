@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react';
 import {addEmployerToCustomer} from '../../../api/requests';
-import Header from '../../../components/Header/Header';
 
 const AddEmployerForCustomer: FC<any> = () => {
     const [customerId, setCustomerId] = useState<string>('');
@@ -21,7 +20,6 @@ const AddEmployerForCustomer: FC<any> = () => {
 
     return (
         <div>
-            <Header />
             <h2>Add Customer to Employer</h2>
             <form onSubmit={handleSubmit}>
                 <label>Client ID:</label>

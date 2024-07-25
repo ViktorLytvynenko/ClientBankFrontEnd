@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react';
 import {removeEmployerToCustomer} from '../../../api/requests';
-import Header from '../../../components/Header/Header';
 
 const DeleteEmployerForCustomer: FC<any> = () => {
     const [customerId, setCustomerId] = useState<string>('');
@@ -21,7 +20,6 @@ const DeleteEmployerForCustomer: FC<any> = () => {
 
     return (
         <div>
-            <Header />
             <h2>Remove Customer from Employer</h2>
             <form onSubmit={handleSubmit}>
                 <label>Client ID:</label>

@@ -1,11 +1,9 @@
 import {FC} from "react";
-import Header from "../../components/Header/Header";
 import styles from "./home.module.scss"
 
 const Home: FC<any> = () => {
     return (
         <div>
-            <Header/>
             <div className={styles.container}>
                 <div className={styles.container_texts}>
                     <p className={styles.container_texts_text1}>
