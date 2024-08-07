@@ -47,7 +47,7 @@ export interface IStateCustomers {
 }
 
 export interface Candidate {
-    [key: string]: string;
+    [key: string]: any;
 }
 
 const initialState: IStateCustomers = {

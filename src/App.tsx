@@ -7,8 +7,6 @@ import Contacts from "./screens/Contacts/Contacts";
 import {Provider} from "react-redux";
 import store from "./redux/store";
 import Info from "./screens/Info/Info";
-import CreateCustomer from "./screens/Info/InfoRequests/CreateCustomer";
-import UpdateCustomer from "./screens/Info/InfoRequests/UpdateCustomer";
 import DeleteCustomer from "./screens/Info/InfoRequests/DeleteCustomer";
 import CreateAccountForCustomer from "./screens/Info/InfoRequests/CreateAccountForCustomer";
 import DeleteAccountForCustomer from "./screens/Info/InfoRequests/DeleteAccountForCustomer";

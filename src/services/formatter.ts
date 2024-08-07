@@ -1,13 +1,12 @@
 import {Candidate} from "../redux/slices/bank";
 
-interface IUpdateCustomer {
+export interface IUpdateCustomer {
     id: string,
     customer: Candidate
 }
 
 const formatter = {
-    updateCustomer: <IUpdateCustomer>(candidate: Candidate) => (
-        {
+    updateCustomer: (candidate: Candidate): IUpdateCustomer => ({
             id: candidate.id,
             customer: {
                 name: candidate.name,

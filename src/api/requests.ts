@@ -1,5 +1,6 @@
 import {instance} from "./instance";
 import {Candidate} from "../redux/slices/bank";
+import {IUpdateCustomer} from "../services/formatter";
 
 const customers = "/customers"
 const accounts = "/accounts"
@@ -14,17 +15,7 @@ export const createCustomer = async (customer: Candidate) => {
     return response.data;
 };
 
-interface ICustomer {
-    customer: {
-        name: string,
-        email: string,
-        age: number,
-        password: string,
-        phone: string
-    }
-}
-
-export const updateCustomer = async ({id, customer}: { id: string; customer: ICustomer }) => {
+export const updateCustomer = async ({ id, customer }: IUpdateCustomer) => {
     const response = await instance.put(customers + `/update/${id}`, customer);
     return response.data;
 };
