@@ -19,6 +19,7 @@ import DeleteAllAccountsForCustomer from "./screens/Info/InfoRequests/DeleteAllA
 import DeleteEmployerForCustomer from "./screens/Info/InfoRequests/DeleteEmployerForCustomer";
 import AddEmployerForCustomer from "./screens/Info/InfoRequests/AddEmployerForCustomer";
 import Header from "./components/Header/Header";
+import CustomForm from "./screens/Info/InfoRequests/CustomForm";
 
 
 const App: FC<any> = () => {
@@ -34,8 +35,8 @@ const App: FC<any> = () => {
 
                         <Route path='/info'>
                             <Route path='' element={<Info/>}/>
-                            <Route path='create_customer' element={<CreateCustomer/>}/>
-                            <Route path='edit_customer' element={<UpdateCustomer/>}/>
+                            <Route path='create_customer' element={<CustomForm type="create_customer"/>}/>
+                            <Route path='edit_customer' element={<CustomForm type="update_customer"/>}/>
                             <Route path='delete_customer' element={<DeleteCustomer/>}/>
                             <Route path='create_account' element={<CreateAccountForCustomer/>}/>
                             <Route path='delete_account' element={<DeleteAccountForCustomer/>}/>
@@ -45,6 +46,7 @@ const App: FC<any> = () => {
                             <Route path='send_funds' element={<SendFunds/>}/>
                             <Route path='add_customer_from_employer' element={<AddEmployerForCustomer/>}/>
                             <Route path='remove_customer_from_employer' element={<DeleteEmployerForCustomer/>}/>
+
                         </Route>
 
                     </Routes>

@@ -1,5 +1,6 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {getAllDataCustomers} from "../../api/requests";
+import {createCustomer, getAllDataCustomers, updateCustomer} from "../../api/requests";
+import formatter from "../../services/formatter";
 
 export interface IStateCustomers {
     data: any;
@@ -45,6 +46,10 @@ export interface IStateCustomers {
     }
 }
 
+export interface Candidate {
+    [key: string]: string;
+}
+
 const initialState: IStateCustomers = {
     data: [],
     create_customer: {
@@ -52,7 +57,9 @@ const initialState: IStateCustomers = {
         list: [
             "name",
             "email",
-            "age"
+            "age",
+            "phone",
+            "password"
         ],
     },
     update_customer: {
@@ -61,7 +68,9 @@ const initialState: IStateCustomers = {
             "id",
             "name",
             "email",
-            "age"
+            "age",
+            "phone",
+            "password"
         ]
     },
     delete_customer: {
@@ -128,10 +137,49 @@ export const getData = createAsyncThunk(
         try {
             return await getAllDataCustomers();
         } catch (error) {
-            throw Error("Failed to fetch sales data");
+            throw Error("Failed to fetch customers data");
         }
     }
 );
+
+export const sendForm = createAsyncThunk<any, { type: string; candidate: Candidate }>(
+    'users/send-form',
+    async ({type, candidate}) => {
+        let data = null;
+
+        switch (type) {
+            case 'create_customer':
+                data = await createCustomer(candidate);
+                break;
+            case 'update_customer':
+              data = await updateCustomer(formatter.updateCustomer(candidate));
+              break;
+            // case 'delete_customer':
+            //   data = await deleteCustomer(formatter.deleteCustomer(candidate));
+            //   break;
+            // case 'create_account_customer':
+            //   data = await createAccountByCustomerId({ ...candidate });
+            //   break;
+            // case 'delete_account_customer':
+            //   data = await deleteCustomerAccount(formatter.deleteAccountById(candidate));
+            //   break;
+            // case 'add_funds':
+            //   data = await addFunds(formatter.addFunds(candidate));
+            //   break;
+            // case 'withdraw_funds':
+            //   data = await withdrawFunds(formatter.withdrawFunds(candidate));
+            //   break;
+            // case 'send_funds':
+            //   data = await sendForm(formatter.sendFunds(candidate));
+            //   break;
+            default:
+                data = null;
+        }
+
+        return data;
+    }
+);
+
 
 export const bankSlice = createSlice({
     name: "customers",

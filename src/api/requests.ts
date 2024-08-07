@@ -1,4 +1,5 @@
 import {instance} from "./instance";
+import {Candidate} from "../redux/slices/bank";
 
 const customers = "/customers"
 const accounts = "/accounts"
@@ -8,12 +9,22 @@ export const getAllDataCustomers = async () => {
     return data;
 }
 
-export const createCustomer = async (customer: {name: string, email: string, age: number, phone: string, password: string}) => {
+export const createCustomer = async (customer: Candidate) => {
     const response = await instance.post(customers + "/create", customer);
     return response.data;
 };
 
-export const updateCustomer = async (id: string, customer: { name: string, email: string, age: number }) => {
+interface ICustomer {
+    customer: {
+        name: string,
+        email: string,
+        age: number,
+        password: string,
+        phone: string
+    }
+}
+
+export const updateCustomer = async ({id, customer}: { id: string; customer: ICustomer }) => {
     const response = await instance.put(customers + `/update/${id}`, customer);
     return response.data;
 };
